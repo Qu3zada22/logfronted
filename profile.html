@@ -1,12 +1,43 @@
-<!-- profile.html -->
 <!DOCTYPE html>
-<html>
-<head><title>Perfil</title></head>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Perfil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-    <h1>Perfil de Usuario</h1>
-    <p>¡Bienvenid@s, <span id="usernameDisplay">Usuario</span>! (ID: <span id="userIdDisplay">?</span>)</p>
-    <p>(Esta página es accesible si guardamos el ID en localStorage, pero aún no es segura.)</p>
-    <button id="logoutButton">Logout</button>
-    <script src="profile.js"></script>
+  <div class="container profile-container">
+    <div class="profile-header">
+      <div class="profile-avatar" id="avatarInitial"></div>
+      <div class="profile-info">
+        <h2 id="usernameDisplay">Usuario</h2>
+        <p>Cuenta Personal</p>
+      </div>
+    </div>
+    
+    <div class="profile-details">
+      <h3>Información de la cuenta</h3>
+      
+      <div class="detail-item">
+        <div class="detail-label">ID de Usuario:</div>
+        <div class="detail-value" id="userIdDisplay"></div>
+      </div>
+      
+      <div class="detail-item">
+        <div class="detail-label">Nombre:</div>
+        <div class="detail-value" id="usernameDetail"></div>
+      </div>
+      
+      <div class="detail-item">
+        <div class="detail-label">Estado:</div>
+        <div class="detail-value">Activo</div>
+      </div>
+    </div>
+    
+    <button id="logoutButton" class="btn">Cerrar Sesión</button>
+  </div>
+  
+  <script src="profile.js"></script>
 </body>
 </html>
